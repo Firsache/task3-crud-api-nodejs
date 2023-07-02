@@ -23,13 +23,13 @@ class Controller {
       return false;
     } else {
       db.splice(userToDelIndex, 1);
-      return `User with id ${userId} is deleted`;
+      return true;
     }
   }
 
   async updateUserById(userId, userData) {
     const userIdx = db.findIndex((user) => user.id === userId);
-    if (!userIdx) {
+    if (userIdx === -1) {
       return false;
     } else {
       const userUpdated = { ...userData, id: userId };
