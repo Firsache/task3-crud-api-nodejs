@@ -1,13 +1,8 @@
 const db = require("../db");
 
-const getAll = async (_, res) => {
-  const users = db;
-  res.json({
-    status: 200,
-    message: "success",
-    data: {
-      result: users,
-    },
-  });
+const getAll = async () => {
+  const users = await db;
+  return users;
+  // return new Promise((resolve, reject) => resolve(db));
 };
 module.exports = getAll;
