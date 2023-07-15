@@ -1,0 +1,40 @@
+{
+  "name": "task3-crud-api-nodejs",
+  "version": "1.0.0",
+  "description": "crud api vanilla node.js",
+  "main": "./src/server.js",
+  "scripts": {
+    "start:prod": "cross-env NODE_ENV=production npm run build && node ./dist/bundle.js",
+    "start:dev": "cross-env NODE_ENV=development nodemon ./src/server.js",
+    "lint": "eslint **/*.js",
+    "lint:fix": "eslint --fix **/*.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Firsache/task3-crud-api-nodejs"
+  },
+  "keywords": [
+    "crud",
+    "api",
+    "node.js"
+  ],
+  "author": "Liubov Firsova <firsova.lyub@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-loader": "^9.1.2",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^2.0.22",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.0"
+  }
+}
